@@ -1,17 +1,22 @@
 class bubble {
-    constructor(pokemonJN, x, y) {
-        this.c = 1;
-        this.title = pokemonJN.name;
+    constructor(wordJS, x, y) {
+        this.title = wordJS[0];
         this.x = x;
         this.y = y;
     }
 
     display() {
         // Draw the bubble
-        fill("#F1DEDE");  // 
-        ellipse(this.x, thi.y, 100, 100);
+        fill("#D496A7");
+        noStroke();
+        ellipseMode(CENTER);
+        ellipse(this.x, this.y, 100, 100);
 
         // Write the text
+        fill(255);
+        textAlign(CENTER);
+        textSize(18);
+        text(this.title, this.x, this.y + 5);
 
     }
 

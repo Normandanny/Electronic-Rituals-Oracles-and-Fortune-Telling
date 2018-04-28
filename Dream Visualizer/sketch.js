@@ -1,7 +1,9 @@
+// Stage detection
 let choiceStage;
 let visualStage;
 
 let wordHolder = [];
+let bubbles = [];
 
 // // ES Modules syntax
 // import Unsplash from 'unsplash-js';
@@ -16,35 +18,20 @@ let wordHolder = [];
 // });
 
 function preload() {
-    pokemonJSON[1] = loadJSON("pk1.json");
-    pokemonJSON[2] = loadJSON("pk2.json");
-    pokemonJSON[3] = loadJSON("pk3.json");
-    pokemonJSON[4] = loadJSON("pk4.json");
+    wordHolder = loadJSON("words.json");
 
-    pkmlogo = loadImage("Assets/International_Pokémon_logo.png");
-    pkmlogoGrey = loadImage("Assets/International_Pokémon_logo_grey.png");
-    grass = loadImage("Assets/grass.png");
-    fire = loadImage("Assets/fire.png");
-    water = loadImage("Assets/water.png");
-    bul = loadImage("Assets/1.png");
-    cha = loadImage("Assets/2.png");
-    tur = loadImage("Assets/3.png");
-    tgp = loadImage("Assets/4.png");
-
-    sfr = loadFont('Assets/SanFranciscoText-Regular.otf');
-    sfsb = loadFont('Assets/SanFranciscoText-Semibold.otf');
+    // pkmlogo = loadImage("Assets/International_Pokémon_logo.png");
 }
 
 function setup() {
     createCanvas(800, 800);
 
     // Pass the JSON values into constructors
-    pokemonStats[1] = new pokemon(pokemonJSON[1]);
-    pokemonStats[2] = new pokemon(pokemonJSON[2]);
-    pokemonStats[3] = new pokemon(pokemonJSON[3]);
-    pokemonStats[4] = new pokemon(pokemonJSON[4]);
+    bubbles[1] = new bubble(wordHolder, 100, 100);
 }
 
 function draw() {
-    background(220);
+    background(200);
+
+    bubbles[1].display();
 } 
