@@ -60,3 +60,11 @@ function draw() {
 //     }
 //     console.log(mostrecentword);
 // }
+
+// function visual() {
+
+// }
+
+// function choice() {
+    
+// }
