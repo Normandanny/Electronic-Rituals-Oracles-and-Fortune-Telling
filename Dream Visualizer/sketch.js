@@ -17,6 +17,11 @@ let bubbles = [];
 //   callbackUrl: "{CALLBACK_URL}"
 // });
 
+// Speech Recognition Initialization
+let myChoice = new p5.SpeechRec('en-US', parseResult);
+myChoice.continuous = true;
+myChoice.interimResults = true; // allow partial recognition (faster, less accurate)
+
 function preload() {
     wordHolder = loadJSON("words.json");
 
@@ -34,4 +39,24 @@ function draw() {
     background(200);
 
     bubbles[1].display();
-} 
+}
+
+// function parseResult() {
+//     let mostrecentword = myRec.resultString.split(' ').pop();
+//     if (mostrecentword.indexOf("left") !== -1) {
+//         dx = -1;
+//         dy = 0;
+//     } else if (mostrecentword.indexOf("right") !== -1) {
+//         dx = 1;
+//         dy = 0;
+//     } else if (mostrecentword.indexOf("up") !== -1) {
+//         dx = 0;
+//         dy = -1;
+//     } else if (mostrecentword.indexOf("down") !== -1) {
+//         dx = 0;
+//         dy = 1;
+//     } else if (mostrecentword.indexOf("clear") !== -1) {
+//         background(255);
+//     }
+//     console.log(mostrecentword);
+// }
