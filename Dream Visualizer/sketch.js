@@ -32,13 +32,13 @@ function setup() {
     createCanvas(800, 800);
 
     // Pass the JSON values into constructors
-    bubbles[1] = new bubble(wordHolder, 100, 100);
+    bubbles[0] = new bubble(wordHolder[0], 100, 100);
 }
 
 function draw() {
     background(200);
 
-    bubbles[1].display();
+    bubbles[0].display();
 }
 
 // function parseResult() {

@@ -1,6 +1,6 @@
 class bubble {
     constructor(wordJS, x, y) {
-        this.title = wordJS[0];
+        this.title = wordJS;
         this.x = x;
         this.y = y;
         this.selected = false;
@@ -46,8 +46,8 @@ class bubble {
                 // Write the text
                 fill(255);
                 textAlign(CENTER);
-                textSize(18);
-                text(this.title, this.x, this.y + 5);
+                textSize(24);
+                text(this.title, this.x, this.y + 8);
             }
         }
     }
